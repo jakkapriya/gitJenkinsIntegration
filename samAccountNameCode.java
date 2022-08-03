@@ -22,7 +22,7 @@ class main {
 
             {
 
-                throw new ArgumentException($"'{nameof(firstName)}' cannot be null or whitespace.", nameof(firstName));
+                throw new ArgumentException("cannot be null or whitespace.", nameof(firstName));
 
             }
 
@@ -32,7 +32,7 @@ class main {
 
             {
 
-                throw new ArgumentException($"'{nameof(lastName)}' cannot be null or whitespace.", nameof(lastName));
+                throw new ArgumentException(" cannot be null or whitespace.", nameof(lastName));
 
             }
 
@@ -60,7 +60,7 @@ class main {
 
             {
 
-                samAccountName = $"{lastName}{firstName.Substring(0, i)}";
+                samAccountName = "{lastName}{firstName.Substring(0, i)}";
 
                 exceedsMaxLength = samAccountName.Length > maxSamAccountNameLength;
 
@@ -94,7 +94,7 @@ class main {
 
                 exceedsMaxLength = (samAccountName + x).Length > maxSamAccountNameLength;
 
-                var tempSamAccountName = exceedsMaxLength ? $"{samAccountName.Substring(0, maxSamAccountNameLength - x.ToString().Length)}{x}" : $"{samAccountName}{x}";
+               // var tempSamAccountName = exceedsMaxLength ? $"{samAccountName.Substring(0, maxSamAccountNameLength - x.ToString().Length)}{x}" : $"{samAccountName}{x}";
 
                 samAccountNameExists = CheckUsernameExistsICON(tempSamAccountName) || CheckUsernameExistsLPRA(tempSamAccountName);
 
