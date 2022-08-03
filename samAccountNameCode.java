@@ -9,7 +9,7 @@
         /// <param name="lastName"></param>
 
         /// <returns></returns>
-
+class main {
         public string GenerateLoginId(string firstName, string lastName)
 
         {
@@ -144,4 +144,4 @@
 
         }
 
- 
+}
